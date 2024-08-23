@@ -8,8 +8,6 @@ date: 2024-07-30
 ![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/SB_profile.png?raw=true)
 
 
-# Starbucks Capstone Challenge
-
 ## Introduction
 
 This data set contains simulated data that mimics customer behavior on the Starbucks rewards mobile app. Once every few days, Starbucks sends out an offer to users of the mobile app. An offer can be merely an advertisement for a drink or an actual offer such as a discount or BOGO (buy one get one free). Some users might not receive any offer during certain weeks. 
@@ -39,7 +37,6 @@ We also need to take into account that some demographic groups will make purchas
 
 # Data Sets
 
-
 All neccessary libraries are imported as below
 
 ![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/libraries.png?raw=true)
@@ -54,9 +51,6 @@ Here is the schema and explanation of each variable in the files:
 
 
 ## Portfolio
-
-
-
 
 **portfolio.json**
 * id (string) - offer id
@@ -306,13 +300,13 @@ The most positive correlated attribute is the perc_complete which is the amount 
 
 So correlation number above shows the strength of the linear relationship between the completed offers and all other numerical variables. Now let have a look at them when they are plotted in graphs.
 
-![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/featured_corr1.png?raw=true)
+![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/features_corr1.png?raw=true)
 
-![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/featured_corr2.png?raw=true)
+![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/features_corr2.png?raw=true)
 
 There is no direct correlation that we can see here. The higher transaction count doesn't mean the spending amount is also higher. The higher promo usage is in the middle area of the distribution. But what we can see is that the higher offer completion lies more in the the middle range of the transaction count.
 
-![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/featured_corr3.png?raw=true)
+![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/features_corr3.png?raw=true)
 
 This is interesting. We see the higher promo usage, which in green to yellow color marks lies densely for transaction count roughly more than five and below 25 and the total income more than its 50th percentile to 75th percentile. We also noted here that people with higher income don't spend more than 20 transactions. 
 
