@@ -4,11 +4,7 @@ date: 2024-07-30
 ---
 
 
-
 ![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/SB_profile.png?raw=true)
-
-
-# Starbucks Capstone Challenge
 
 ## Introduction
 
@@ -306,13 +302,13 @@ The most positive correlated attribute is the perc_complete which is the amount 
 
 So correlation number above shows the strength of the linear relationship between the completed offers and all other numerical variables. Now let have a look at them when they are plotted in graphs.
 
-![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/featured_corr1.png?raw=true)
+![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/features_corr1.png?raw=true)
 
-![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/featured_corr2.png?raw=true)
+![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/features_corr2.png?raw=true)
 
 There is no direct correlation that we can see here. The higher transaction count doesn't mean the spending amount is also higher. The higher promo usage is in the middle area of the distribution. But what we can see is that the higher offer completion lies more in the the middle range of the transaction count.
 
-![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/featured_corr3.png?raw=true)
+![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/features_corr3.png?raw=true)
 
 This is interesting. We see the higher promo usage, which in green to yellow color marks lies densely for transaction count roughly more than five and below 25 and the total income more than its 50th percentile to 75th percentile. We also noted here that people with higher income don't spend more than 20 transactions. 
 
@@ -356,7 +352,24 @@ Five different classifier models are used to find the best score and the results
 
 ![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/ml_results.png?raw=true)
 
-The model that scored the highest is Gradient Boosting Classifier with a score of 0.566 and the highest accuracy as well with 83%. While Gradient Boosting can be slower to train compared to some algorithms, it can handle large datasets efficiently and effectively.m
+The model that scored the highest is Gradient Boosting Classifier with a score of 0.566 and the highest accuracy as well with 83%. While Gradient Boosting can be slower to train compared to some algorithms, it can handle large datasets efficiently and effectively.
+
+## Refining Model
+
+Since we have now selected a model, which is the Gradient Boosting Classifier, we can proceed with fine tune it to improve it. The method we are going to choose is Grid Search.
+
+![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/code_refine.png?raw=true)
+
+The best combination of hyperparameter values are **n_estimators** = 100, **learning_rate** = 0.2 and **min_sample_leaf** = 30. 
+The acccuracy and F1 score before and after are displayed below:
+
+![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/scores.png?raw=true)
+
+The F1-score has improved from 0.5657 to 0.5955 after hypertuning the parameter. So this is our final best model.
+
+The advantage of Grid search is that it is easy to implement to find the best model within the grid. However, it can quickly become time consuming as the number of the model continues to multiply when we add new hyperparameter values. In our case there are 3x3x4 = 36 combinations of the hyperparameter values and it will train each model 3 times (since we are using three-fold cross validation). Overall there are 36 x 3 = 108 rounds of training were done and it took more than 2 minutes for the time spent modelling.
+
+## Feature Importance
 
 ![alt text](https://github.com/fatinshariff/sbcapstone/blob/main/image_blog/ml_fi.png?raw=true)
 
