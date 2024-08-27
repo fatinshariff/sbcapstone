@@ -52,8 +52,6 @@ Here is the schema and explanation of each variable in the files:
 ## Portfolio
 
 
-
-
 **portfolio.json**
 * id (string) - offer id
 * offer_type (string) - type of offer ie BOGO, discount, informational

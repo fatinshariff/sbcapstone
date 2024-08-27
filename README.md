@@ -2,6 +2,8 @@
 
 ## Overview
 
+Please [click here](https://fatinshariff.github.io/sbcapstone/2024/07/30/SBProject.html) to visit the blogpost.
+
 The Starbucks Capstone Project is designed to analyze customer behavior on the Starbucks rewards mobile app using simulated data. The goal is to determine which demographic groups respond best to different types of offers, including discounts, BOGO (buy one get one free) deals, and informational advertisements. 
 
 ## Objective
