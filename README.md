@@ -282,14 +282,4 @@ This project is part of the Udacity Data Science Nanodegree program.
 - GitHub: [@fatinshariff](https://github.com/fatinshariff)
 - Blog: [Project Analysis](https://fatinshariff.github.io/sbcapstone/2024/07/30/SBProject.html)
 
----
 
-## 🙏 Acknowledgments
-
-- Starbucks for providing the simulated dataset
-- Udacity Data Science Nanodegree program
-- Scikit-learn documentation and community
-
----
-
-**Project Status:** ✅ Complete & Ready for Production
